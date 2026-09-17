@@ -14,6 +14,8 @@ import MyPage from './components/MyPage';
 import API from './api/axiosConfig';
 import logo from './assets/verivote.png';
 
+const EXPLORER_URL = process.env.REACT_APP_EXPLORER_URL || 'https://explorer.jw-capstone.store';
+
 
 function App() {
   return (
@@ -95,11 +97,11 @@ const AppContent = () => {
             <span>투표 검증</span>
           </NavLink>
           <a
-            href="https://explorer.jw-capstone.store"
+            href={EXPLORER_URL}
             className="nav-link nav-link-tooltip"
             target="_blank"
             rel="noopener noreferrer"
-            data-tooltip="https://explorer.jw-capstone.store"
+            data-tooltip={EXPLORER_URL}
           >
             <span>블록 조회</span>
           </a>
